@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troba la parella</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="joc-no-iniciat">
+
+  <!-- PANTALLA STANDBY -->
+  <div class="pantalla-inici" id="pantallaStandby">
+
+    <video autoplay muted loop playsinline class="video-fons">
+      <source src="Imatges/standby.mp4" type="video/mp4">
+    </video>
+
+    <div class="cercle-inici">
+      <img src="Imatges/ma.png" alt="Toca per començar">
+    </div>
+
+    <!-- IMATGE TÍTOL AMB TEXT DESPLAÇANT -->
+    <div class="contenidor-titol-standby">
+      <div class="imatge-wrapper">
+        <img src="Imatges/fons_titol.png" alt="Títol" class="imatge-titol-standby">
+        <div class="text-desplacant-wrapper">
+          <span class="text-desplacant">POSAR EN VALOR LES CAPACITATS DE CADASCÚ</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+    
+
+  <!-- PANTALLA INICI DEL JOC -->
+  <h1>Troba la parella</h1>
+  <div class="missatge-error" id="overlayError"></div>
+  
+  <button class="boto-reiniciar" onclick="iniciarJoc()">
+    <img src="Imatges/reiniciar.png" alt="Reiniciar">
+    <span>TORNAR A<br>COMENÇAR</span>
+  </button>
+  
+  <div id="tauler"></div>
+
+  <!-- Pantalla de victòria -->
+  <div class="victoria" id="victoria">
+    <button class="boto-reiniciar boto-victoria" onclick="iniciarJoc()">
+      <img src="Imatges/reiniciar.png" alt="Reiniciar">
+      <span>TORNAR A<br>COMENÇAR</span>
+    </button>
+    <h2>Bona feina!</h2>
+    <p class="subtitol-victoria">A AMPANS acompanyem a persones amb discapacitat intel·lectual<br> i en risc d'exclusió per fer realitat els seus projectes de vida.</p>
+    <div id="tauler-final"></div>
+  </div>
+
+  <!-- Parella trobada -->
+  <div class="overlay-parella" id="overlayParella">
+    <div class="parella-trobada">
+      <img id="cartaParella1" src="" alt="Carta 1">
+      <img id="cartaParella2" src="" alt="Carta 2">
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
